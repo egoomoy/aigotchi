@@ -1,0 +1,4 @@
+{"type":"human","message":{"content":"hello"},"timestamp":"2026-03-24T12:00:00Z"}
+{"type":"assistant","message":{"model":"claude-opus-4-6[1m]","usage":{"input_tokens":100,"cache_creation_input_tokens":500,"cache_read_input_tokens":200,"output_tokens":50},"content":[{"type":"text","text":"hi"}]},"timestamp":"2026-03-24T12:00:01Z"}
+{"type":"human","message":{"content":"write code"},"timestamp":"2026-03-24T12:01:00Z"}
+{"type":"assistant","message":{"model":"claude-opus-4-6[1m]","usage":{"input_tokens":200,"cache_creation_input_tokens":0,"cache_read_input_tokens":800,"output_tokens":150},"content":[{"type":"text","text":"done"}]},"timestamp":"2026-03-24T12:01:01Z"}
