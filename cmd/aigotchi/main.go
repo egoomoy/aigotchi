@@ -449,6 +449,39 @@ var nameCmd = &cobra.Command{
 	},
 }
 
+var resetCmd = &cobra.Command{
+	Use:   "reset",
+	Short: "Reset pet to Egg stage with zero tokens",
+	RunE: func(cmd *cobra.Command, args []string) error {
+		fmt.Print("This will delete your pet and start over. Are you sure? [y/N] ")
+		var answer string
+		fmt.Scanln(&answer)
+		if answer != "y" && answer != "Y" {
+			fmt.Println("Cancelled.")
+			return nil
+		}
+
+		store, err := openStore()
+		if err != nil {
+			return err
+		}
+
+		p := pet.NewPet("Mochi")
+		s := engine.NewState()
+
+		if err := savePetAndState(store, p, s); err != nil {
+			return err
+		}
+
+		// Clear events log
+		eventsPath := store.Path(eventsFile)
+		os.Remove(eventsPath)
+
+		fmt.Println("Reset complete. Mochi is back to an Egg!")
+		return nil
+	},
+}
+
 func init() {
 	collectCmd.Flags().String("session-id", "", "session ID")
 	collectCmd.Flags().String("cwd", "", "working directory")
@@ -466,6 +499,7 @@ func init() {
 			fmt.Println("aigotchi", version)
 		},
 	})
+	rootCmd.AddCommand(resetCmd)
 }
 
 func main() {

@@ -59,13 +59,13 @@ func (s Stage) XPThreshold() int {
 	case StageEgg:
 		return 0
 	case StageBaby:
-		return 100
+		return 10000
 	case StageJunior:
-		return 300
+		return 50000
 	case StageSenior:
-		return 600
+		return 150000
 	case StageLegend:
-		return 1000
+		return 500000
 	default:
 		return 0
 	}

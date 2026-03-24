@@ -9,8 +9,8 @@ import (
 func TestEggToBabyEvolution(t *testing.T) {
 	p := pet.NewPet("Tester")
 	s := NewState()
-	// Need XP >= Baby threshold (100)
-	s.TotalTokensEarned = 100 * 1000
+	// Need XP >= Baby threshold (10000)
+	s.TotalTokensEarned = 10000 * 1000
 	s.Health = 80
 
 	evolved, newPet, _ := CheckEvolution(p, s)
@@ -28,7 +28,7 @@ func TestEggToBabyEvolution(t *testing.T) {
 func TestInsufficientXPBlocksEvolution(t *testing.T) {
 	p := pet.NewPet("Tester")
 	s := NewState()
-	s.TotalTokensEarned = 50 * 1000 // XP = 50, need 100
+	s.TotalTokensEarned = 5000 * 1000 // XP = 5000, need 10000
 	s.Health = 80
 
 	evolved, _, _ := CheckEvolution(p, s)
@@ -40,7 +40,7 @@ func TestInsufficientXPBlocksEvolution(t *testing.T) {
 func TestLowHealthBlocksEvolution(t *testing.T) {
 	p := pet.NewPet("Tester")
 	s := NewState()
-	s.TotalTokensEarned = 200 * 1000 // XP = 200, enough for Baby
+	s.TotalTokensEarned = 20000 * 1000 // XP = 20000, enough for Baby
 	s.Health = 40                     // below 50
 
 	evolved, _, _ := CheckEvolution(p, s)
@@ -53,7 +53,7 @@ func TestLegendDoesNotEvolve(t *testing.T) {
 	p := pet.NewPet("Tester")
 	p.Stage = pet.StageLegend
 	s := NewState()
-	s.TotalTokensEarned = 2000 * 1000
+	s.TotalTokensEarned = 600000 * 1000
 	s.Health = 100
 
 	evolved, _, _ := CheckEvolution(p, s)
@@ -66,7 +66,7 @@ func TestDormantDoesNotEvolve(t *testing.T) {
 	p := pet.NewPet("Tester")
 	p.Dormant = true
 	s := NewState()
-	s.TotalTokensEarned = 200 * 1000
+	s.TotalTokensEarned = 20000 * 1000
 	s.Health = 80
 
 	evolved, _, _ := CheckEvolution(p, s)
@@ -84,7 +84,7 @@ func TestDeevolutionRemovesLastTrait(t *testing.T) {
 
 	s := NewState()
 	s.Health = 0
-	s.TotalTokensEarned = 400 * 1000
+	s.TotalTokensEarned = 60000 * 1000
 
 	devolved, newPet, newState := CheckDeevolution(p, s)
 	if !devolved {
@@ -121,7 +121,7 @@ func TestReviveDormantPreservesXP(t *testing.T) {
 	p := pet.NewPet("Tester")
 	p.Dormant = true
 	s := NewState()
-	s.TotalTokensEarned = 500 * 1000
+	s.TotalTokensEarned = 60000 * 1000
 	s.TotalTokensSpent = 50 * 1000
 	s.Health = 0
 	s.Hunger = 10
@@ -140,7 +140,7 @@ func TestReviveDormantPreservesXP(t *testing.T) {
 	if newState.Happiness != 100 {
 		t.Errorf("expected Happiness=100 after revive, got %d", newState.Happiness)
 	}
-	if newState.TotalTokensEarned != 500*1000 {
-		t.Errorf("expected TotalTokensEarned preserved at 500000, got %d", newState.TotalTokensEarned)
+	if newState.TotalTokensEarned != 60000*1000 {
+		t.Errorf("expected TotalTokensEarned preserved at 60000000, got %d", newState.TotalTokensEarned)
 	}
 }

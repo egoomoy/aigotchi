@@ -80,10 +80,10 @@ func TestStageXPThreshold(t *testing.T) {
 		threshold int
 	}{
 		{pet.StageEgg, 0},
-		{pet.StageBaby, 100},
-		{pet.StageJunior, 300},
-		{pet.StageSenior, 600},
-		{pet.StageLegend, 1000},
+		{pet.StageBaby, 10000},
+		{pet.StageJunior, 50000},
+		{pet.StageSenior, 150000},
+		{pet.StageLegend, 500000},
 	}
 
 	for _, c := range cases {

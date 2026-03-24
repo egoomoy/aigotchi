@@ -20,7 +20,7 @@ func TestFullLifecycle(t *testing.T) {
 	s := engine.NewState()
 
 	// 2. Simulate token earning (enough for Baby evolution)
-	s.TotalTokensEarned = 150_000 // 150 XP > 100 threshold
+	s.TotalTokensEarned = 15_000_000 // 15000 XP > 10000 threshold
 
 	// 3. Check evolution
 	evolved, p, s := engine.CheckEvolution(p, s)
