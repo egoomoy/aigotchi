@@ -1,4 +1,4 @@
-module github.com/koo/aigotchi
+module github.com/egoomoy/aigotchi
 
 go 1.26.1
 

@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/koo/aigotchi/internal/pet"
-	"github.com/koo/aigotchi/internal/renderer"
+	"github.com/egoomoy/aigotchi/internal/pet"
+	"github.com/egoomoy/aigotchi/internal/renderer"
 )
 
 func TestRenderPetEggNonEmpty(t *testing.T) {

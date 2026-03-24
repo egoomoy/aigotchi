@@ -6,9 +6,9 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 
-	"github.com/koo/aigotchi/internal/engine"
-	"github.com/koo/aigotchi/internal/pet"
-	"github.com/koo/aigotchi/internal/storage"
+	"github.com/egoomoy/aigotchi/internal/engine"
+	"github.com/egoomoy/aigotchi/internal/pet"
+	"github.com/egoomoy/aigotchi/internal/storage"
 )
 
 type screen int

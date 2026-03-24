@@ -1,6 +1,6 @@
 package engine
 
-import "github.com/koo/aigotchi/internal/pet"
+import "github.com/egoomoy/aigotchi/internal/pet"
 
 // nextStage returns the stage after p.Stage, or p.Stage if already at max.
 func nextStage(stage pet.Stage) pet.Stage {

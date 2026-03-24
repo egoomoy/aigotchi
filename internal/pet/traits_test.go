@@ -3,7 +3,7 @@ package pet_test
 import (
 	"testing"
 
-	"github.com/koo/aigotchi/internal/pet"
+	"github.com/egoomoy/aigotchi/internal/pet"
 )
 
 func TestTraitForStageDeterministic(t *testing.T) {

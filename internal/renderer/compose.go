@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/charmbracelet/lipgloss"
-	"github.com/koo/aigotchi/internal/pet"
+	"github.com/egoomoy/aigotchi/internal/pet"
 )
 
 const barSegments = 10

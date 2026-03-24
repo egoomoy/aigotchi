@@ -11,12 +11,12 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
 
-	"github.com/koo/aigotchi/internal/collector"
-	"github.com/koo/aigotchi/internal/engine"
-	"github.com/koo/aigotchi/internal/pet"
-	"github.com/koo/aigotchi/internal/renderer"
-	"github.com/koo/aigotchi/internal/storage"
-	"github.com/koo/aigotchi/internal/tui"
+	"github.com/egoomoy/aigotchi/internal/collector"
+	"github.com/egoomoy/aigotchi/internal/engine"
+	"github.com/egoomoy/aigotchi/internal/pet"
+	"github.com/egoomoy/aigotchi/internal/renderer"
+	"github.com/egoomoy/aigotchi/internal/storage"
+	"github.com/egoomoy/aigotchi/internal/tui"
 )
 
 const (

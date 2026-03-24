@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/koo/aigotchi/internal/pet"
+	"github.com/egoomoy/aigotchi/internal/pet"
 )
 
 func TestNewPet(t *testing.T) {

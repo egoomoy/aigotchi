@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/koo/aigotchi/internal/storage"
+	"github.com/egoomoy/aigotchi/internal/storage"
 )
 
 func TestNewStore_CreatesDirectory(t *testing.T) {

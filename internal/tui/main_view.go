@@ -6,8 +6,8 @@ import (
 
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/koo/aigotchi/internal/engine"
-	"github.com/koo/aigotchi/internal/renderer"
+	"github.com/egoomoy/aigotchi/internal/engine"
+	"github.com/egoomoy/aigotchi/internal/renderer"
 )
 
 var (

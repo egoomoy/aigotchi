@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/koo/aigotchi/internal/engine"
-	"github.com/koo/aigotchi/internal/pet"
-	"github.com/koo/aigotchi/internal/renderer"
-	"github.com/koo/aigotchi/internal/storage"
+	"github.com/egoomoy/aigotchi/internal/engine"
+	"github.com/egoomoy/aigotchi/internal/pet"
+	"github.com/egoomoy/aigotchi/internal/renderer"
+	"github.com/egoomoy/aigotchi/internal/storage"
 )
 
 func TestFullLifecycle(t *testing.T) {
