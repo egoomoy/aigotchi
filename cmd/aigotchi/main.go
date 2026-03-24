@@ -19,6 +19,8 @@ import (
 	"github.com/egoomoy/aigotchi/internal/tui"
 )
 
+var version = "dev"
+
 const (
 	dataDir   = "~/.aigotchi"
 	petFile   = "pet.json"
@@ -457,6 +459,13 @@ func init() {
 	rootCmd.AddCommand(playCmd)
 	rootCmd.AddCommand(collectCmd)
 	rootCmd.AddCommand(nameCmd)
+	rootCmd.AddCommand(&cobra.Command{
+		Use:   "version",
+		Short: "Print aigotchi version",
+		Run: func(cmd *cobra.Command, args []string) {
+			fmt.Println("aigotchi", version)
+		},
+	})
 }
 
 func main() {
