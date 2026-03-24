@@ -33,6 +33,7 @@ brews:
   - repository:
       owner: egoomoy
       name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
     homepage: https://github.com/egoomoy/aigotchi
     description: "Terminal Tamagotchi that grows with your Claude Code token usage"
     install: |
